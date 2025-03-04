@@ -1,5 +1,4 @@
 import React from 'react';
-import { cn } from "@/lib/utils";
 import { PricingCard } from './pricing-card';
 import { PricingFaq } from './pricing-faq';
 
