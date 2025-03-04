@@ -44,21 +44,21 @@ export function PricingFaq() {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold mb-8">자주 묻는 질문</h2>
-      <div className="space-y-4">
+      <h2 className="text-2xl font-bold mb-10">자주 묻는 질문</h2>
+      <div className="space-y-5">
         {faqItems.map((item, index) => (
           <div 
             key={index} 
-            className="border border-white/10 rounded-lg overflow-hidden"
+            className="border border-white/10 rounded-lg overflow-hidden shadow-sm"
           >
             <button
               onClick={() => toggleItem(index)}
-              className="flex justify-between items-center w-full px-6 py-4 text-left"
+              className="flex justify-between items-center w-full px-6 py-5 text-left"
             >
-              <span className="font-medium">{item.question}</span>
+              <span className="font-medium text-base">{item.question}</span>
               <svg
                 className={cn(
-                  "h-5 w-5 transition-transform duration-200",
+                  "h-5 w-5 transition-transform duration-200 text-gray-400",
                   openItems.includes(index) ? "transform rotate-180" : ""
                 )}
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,11 +76,11 @@ export function PricingFaq() {
               className={cn(
                 "px-6 overflow-hidden transition-all duration-300 ease-in-out",
                 openItems.includes(index) 
-                  ? "max-h-96 py-4 border-t border-white/10" 
+                  ? "max-h-96 py-5 border-t border-white/10" 
                   : "max-h-0 py-0"
               )}
             >
-              <p className="text-gray-400 text-sm">{item.answer}</p>
+              <p className="text-gray-400 text-base leading-relaxed">{item.answer}</p>
             </div>
           </div>
         ))}
